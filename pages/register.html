@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your StudyFlow student account.">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo/apple-touch-icon.png">
+    <meta name="theme-color" content="#5B4BEA">
+    <title>Create Account | StudyFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body class="auth-page">
+<div class="auth-split">
+    <aside class="auth-showcase" aria-hidden="false">
+        <a href="../index.html" class="brand"><img class="brand-logo" src="../assets/logo/logo-mark-white.svg" alt="" width="38" height="38"><span>StudyFlow</span></a>
+        <div class="showcase-copy">
+            <h2>Start building <span>better study habits</span>.</h2>
+            <p>Create a free account and organise your whole semester in one calm place.</p>
+            <ul class="showcase-list">
+                <li><b><i class="icon i-book-open" aria-hidden="true"></i></b><span><strong>Courses &amp; tasks</strong> organised in one workspace</span></li>
+                <li><b><i class="icon i-calendar" aria-hidden="true"></i></b><span><strong>Study schedule</strong> with overlap protection</span></li>
+                <li><b><i class="icon i-timer" aria-hidden="true"></i></b><span><strong>Focus timer</strong> that builds daily streaks</span></li>
+            </ul>
+        </div>
+        <img class="showcase-art" src="../assets/illustrations/auth-art.svg" width="492" height="268" alt="" aria-hidden="true">
+    </aside>
+    <div class="auth-panel">
+        <header class="auth-header">
+        <a href="../index.html" class="brand auth-brand-mobile"><img class="brand-logo" src="../assets/logo/logo-mark.svg" alt="" width="38" height="38"><span>StudyFlow</span></a>
+
+        <a href="../index.html" class="back-link"><i class="icon i-arrow-left" aria-hidden="true"></i> Back to home</a>
+    </header>
+        <main class="auth-main">
+
+        <section class="auth-card">
+
+            <div class="auth-heading">
+                
+                <span class="section-label">START YOUR JOURNEY</span>
+
+                <h1>Create your <span class="text-accent">account.</span></h1>
+
+                <p>
+                    Build better study habits and take control
+                    of your academic journey.
+                </p>
+            </div>
+
+            <div id="auth-message" class="auth-message" role="status" aria-live="polite"></div>
+
+            <form id="register-form" class="auth-form">
+
+                <div class="form-group">
+                    <label for="full-name">Full name</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        minlength="2"
+                        maxlength="60"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="register-email">Email address</label>
+                    <input
+                        type="email"
+                        id="register-email"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input
+                        type="password"
+                        id="register-password"
+                        name="password"
+                        placeholder="At least 8 characters"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+                    <small>Use at least 8 characters.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm password</label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirmPassword"
+                        placeholder="Enter your password again"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-submit">
+                    Create Account <i class="icon i-arrow-right" aria-hidden="true"></i>
+                </button>
+
+            </form>
+
+            <div class="auth-divider">
+                <span>ALREADY HAVE AN ACCOUNT?</span>
+            </div>
+
+            <p class="auth-switch">
+                Welcome back?
+                <a href="login.html">Log in here</a>
+            </p>
+
+        </section>
+
+        <p class="auth-footer-note">
+            Plan smarter. Study better. Achieve more.
+        </p>
+
+    </main>
+    </div>
+</div>
+</body>
+</html>
