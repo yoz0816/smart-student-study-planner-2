@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo/apple-touch-icon.png">
+    <meta name="theme-color" content="#5B4BEA">
+    <title>My Courses | StudyFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body class="courses-page">
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebar">
+            <a href="../index.html" class="sidebar-brand">
+                <img class="brand-logo" src="../assets/logo/logo-mark.svg" alt="" width="35" height="35">
+                <span>StudyFlow</span>
+            </a>
+
+            <div class="sidebar-section-label">WORKSPACE</div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">
+                    <span class="nav-icon"><i class="icon i-dashboard" aria-hidden="true"></i></span>
+                    Dashboard
+                </a>
+                <a href="courses.html" class="sidebar-link active">
+                    <span class="nav-icon"><i class="icon i-book-open" aria-hidden="true"></i></span>
+                    My Courses
+                </a>
+                <a href="tasks.html" class="sidebar-link">
+                    <span class="nav-icon"><i class="icon i-check-circle" aria-hidden="true"></i></span>
+                    Tasks
+                </a>
+                <a href="schedule.html" class="sidebar-link">
+                    <span class="nav-icon"><i class="icon i-calendar" aria-hidden="true"></i></span>
+                    Study Schedule
+                </a>
+                <a href="progress.html" class="sidebar-link">
+                    <span class="nav-icon"><i class="icon i-trending-up" aria-hidden="true"></i></span>
+                    Progress
+                </a>
+                <a href="reminders.html" class="sidebar-link">
+                    <span class="nav-icon"><i class="icon i-bell" aria-hidden="true"></i></span>
+                    Reminders
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-user">
+                    <div class="user-avatar" id="user-avatar">S</div>
+                    <div class="sidebar-user-info">
+                        <strong id="sidebar-user-name">Student</strong>
+                        <span>Student account</span>
+                    </div>
+                </div>
+                <button type="button" class="sidebar-logout" id="logout-button">
+                    <i class="icon i-log-out" aria-hidden="true"></i>
+                    <span>Log out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-topbar">
+                <div>
+                    <p class="topbar-label">STUDENT WORKSPACE</p>
+                    <h1>My Courses</h1>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-course-button">
+                    <i class="icon i-plus" aria-hidden="true"></i> Add course
+                </button>
+            </header>
+
+            <section class="courses-intro">
+                <div>
+                    <h2>Manage your learning</h2>
+                    <p>Organize your subjects and keep your semester on track.</p>
+                </div>
+            </section>
+
+            <section class="course-stat-grid">
+                <article class="course-stat-card">
+                    <span class="course-stat-label">TOTAL COURSES</span>
+                    <strong id="total-courses">0</strong>
+                    <span class="course-stat-note">Courses you're taking</span>
+                </article>
+
+                <article class="course-stat-card">
+                    <span class="course-stat-label">TOTAL CREDITS</span>
+                    <strong id="total-credits">0</strong>
+                    <span class="course-stat-note">Combined course credits</span>
+                </article>
+            </section>
+
+            <section class="course-form-panel" id="course-form-panel" hidden>
+                <div class="course-form-heading">
+                    <div>
+                        <h2 id="course-form-title">Add a new course</h2>
+                        <p>Enter the details of your course below.</p>
+                    </div>
+                    <button type="button" class="icon-button" id="close-course-form"
+                            aria-label="Close form"><i class="icon i-x" aria-hidden="true"></i></button>
+                </div>
+
+                <form id="course-form">
+                    <input type="hidden" id="course-id">
+
+                    <div class="course-form-grid">
+                        <div class="form-field">
+                            <label for="course-name">Course name *</label>
+                            <input type="text" id="course-name"
+                                    placeholder="e.g. Data Structures and Algorithms"
+                                    maxlength="100" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="course-code">Course code *</label>
+                            <input type="text" id="course-code"
+                                    placeholder="e.g. SENG 2041"
+                                    maxlength="30" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="course-instructor">Instructor</label>
+                            <input type="text" id="course-instructor"
+                                    placeholder="Instructor's name" maxlength="100">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="course-credits">Credit hours</label>
+                            <input type="number" id="course-credits"
+                                    min="0" max="30" step="1" value="3">
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label for="course-description">Description</label>
+                            <textarea id="course-description" rows="3"
+                                        maxlength="500"
+                                        placeholder="A short description of this course..."></textarea>
+                        </div>
+                    </div>
+
+                    <p class="course-form-message" id="course-form-message"
+                        role="alert"></p>
+
+                    <div class="course-form-actions">
+                        <button type="button" class="btn btn-ghost"
+                                id="cancel-course-form">Cancel</button>
+                        <button type="submit" class="btn btn-primary"
+                                id="save-course-button">Save course</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="courses-list-section">
+                <div class="courses-list-heading">
+                    <div>
+                        <h2>Your courses</h2>
+                        <p id="courses-count-label">0 courses added</p>
+                    </div>
+
+                    <div class="course-search">
+                        <span><i class="icon i-search" aria-hidden="true"></i></span>
+                        <input type="search" id="course-search"
+                                placeholder="Search courses..."
+                                aria-label="Search courses">
+                    </div>
+                </div>
+
+                <div class="course-grid" id="course-grid"></div>
+
+                <div class="courses-empty-state" id="courses-empty-state">
+                    <div class="empty-state-icon"><i class="icon i-book-open" aria-hidden="true"></i></div>
+                    <h3>No courses yet</h3>
+                    <p>Add your first course to start organizing your studies.</p>
+                    <button type="button" class="btn btn-primary"
+                            id="empty-add-course-button"><i class="icon i-plus" aria-hidden="true"></i> Add your first course</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/courses.js" defer></script>
+</body>
+</html>
