@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Log in to your StudyFlow student account.">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo/apple-touch-icon.png">
+    <meta name="theme-color" content="#5B4BEA">
+    <title>Login | StudyFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body class="auth-page">
+<div class="auth-split">
+    <aside class="auth-showcase" aria-hidden="false">
+        <a href="../index.html" class="brand"><img class="brand-logo" src="../assets/logo/logo-mark-white.svg" alt="" width="38" height="38"><span>StudyFlow</span></a>
+        <div class="showcase-copy">
+            <h2>Welcome back to your <span>growth space</span>.</h2>
+            <p>Pick up where you left off: your courses, tasks and focus streak are waiting.</p>
+            <ul class="showcase-list">
+                <li><b><i class="icon i-book-open" aria-hidden="true"></i></b><span><strong>Courses &amp; tasks</strong> organised in one workspace</span></li>
+                <li><b><i class="icon i-calendar" aria-hidden="true"></i></b><span><strong>Study schedule</strong> with overlap protection</span></li>
+                <li><b><i class="icon i-timer" aria-hidden="true"></i></b><span><strong>Focus timer</strong> that builds daily streaks</span></li>
+            </ul>
+        </div>
+        <img class="showcase-art" src="../assets/illustrations/auth-art.svg" width="492" height="268" alt="" aria-hidden="true">
+    </aside>
+    <div class="auth-panel">
+        <header class="auth-header">
+        <a href="../index.html" class="brand auth-brand-mobile"><img class="brand-logo" src="../assets/logo/logo-mark.svg" alt="" width="38" height="38"><span>StudyFlow</span></a>
+
+        <a href="../index.html" class="back-link"><i class="icon i-arrow-left" aria-hidden="true"></i> Back to home</a>
+    </header>
+        <main class="auth-main">
+        <section class="auth-card login-card">
+            <div class="auth-heading">
+                
+                <span class="section-label">WELCOME BACK</span>
+
+                <h1>Good to see <span class="text-accent">you.</span></h1>
+                <p>
+                    Log in to continue organizing your
+                    academic journey.
+                </p>
+            </div>
+
+            <div id="auth-message" class="auth-message" role="status" aria-live="polite"></div>
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Username or email address</label>
+                    <input
+                        type="text"
+                        id="login-email"
+                        name="identifier"
+                        placeholder="admin or you@example.com"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input
+                        type="password"
+                        id="login-password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-submit">
+                    Log In <i class="icon i-arrow-right" aria-hidden="true"></i>
+                </button>
+
+            </form>
+
+            <div class="auth-divider">
+                <span>NEW TO STUDYFLOW?</span>
+            </div>
+
+            <p class="auth-switch">
+                Don't have an account?
+                <a href="register.html">Create one</a>
+            </p>
+
+        </section>
+
+        <p class="auth-footer-note">
+            Your academic journey continues here.
+        </p>
+
+    </main>
+    </div>
+</div>
+</body>
+</html>
