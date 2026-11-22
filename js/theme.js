@@ -1,6 +1,5 @@
 (() => {
     "use strict";
-
     const KEY = "studyflow_theme";
 
     const makeIcon = name => {
