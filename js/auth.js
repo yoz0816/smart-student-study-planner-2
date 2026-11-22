@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     "use strict";
-
-
     const registerForm = document.getElementById("register-form");
     const loginForm = document.getElementById("login-form");
     const message = document.getElementById("auth-message");
