@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     "use strict";
-
     if (
         typeof StudyFlowStorage === "undefined" ||
         typeof StudyFlowStorage.getSession !== "function"
