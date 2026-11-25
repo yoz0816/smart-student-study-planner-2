@@ -2,7 +2,7 @@
 
 **StudyFlow** is a browser-based student study planner that helps students organize courses, academic tasks, study sessions, reminders, and learning progress. It also provides an administrator dashboard for monitoring registered student accounts and platform activity.
 
-The project is built with HTML, CSS, and vanilla JavaScript. It uses the browser's LocalStorage API for data persistence and does not require a backend or database.
+The project is built with HTML, CSS, and JavaScript. It uses the browser's LocalStorage API for data persistence and does not require a backend or database.
 
 ---
 
@@ -25,7 +25,7 @@ StudyFlow is a frontend application built with HTML, CSS, and vanilla JavaScript
 
 ### Design Approach
 
-The interface follows a consistent design system: a light and dark theme, a responsive layout for desktop and mobile, a single icon library, and original illustrations. All visual assets are stored as files in the `assets/` folder rather than being embedded in the HTML or JavaScript code.
+The interface follows a consistent design system: a light and dark theme, a responsive layout for desktop and mobile, a single icon library, and original illustrations.
 
 ---
 
@@ -55,14 +55,52 @@ The interface follows a consistent design system: a light and dark theme, a resp
 
 ---
 
-## 3. Technologies Used
+
+## 3. Project Objectives
+
+### General Objective
+
+To design and develop a responsive, easy-to-use web application that helps university students organize their courses, manage tasks and deadlines, plan study time, and track academic progress in one place, while also giving administrators oversight of student accounts.
+
+### Specific Objectives
+
+1. **Organize academic work:** Let students create and manage courses and tasks, with priorities, deadlines, search, and filtering.
+2. **Plan study time:** Provide a study schedule by date and time that prevents overlapping sessions.
+3. **Prevent missed deadlines:** Provide reminders, including optional browser notifications when a reminder becomes due.
+4. **Build consistent habits:** Provide a focus timer (25-minute focus, 5-minute break) and a daily study streak stored separately for each student.
+5. **Show progress clearly:** Present task completion, course progress, and weekly study activity through simple summaries.
+6. **Support two roles:** Implement role-based workflows for students and administrators, including account search and activation or deactivation.
+7. **Deliver a professional interface:** Provide light and dark themes, a responsive layout, and a consistent icon and illustration set kept in a dedicated `assets/` folder.
+
+### Technical Learning Objectives
+
+As a Web Programming academic project, StudyFlow demonstrates practical use of:
+
+- HTML page structuring and semantic markup.
+- CSS styling, themes, and responsive web design.
+- JavaScript programming and DOM manipulation.
+- Event handling and form validation.
+- Browser LocalStorage for data persistence.
+- Create, read, update, and delete (CRUD) operations.
+- The browser Notification API.
+- User interface design and reusable asset management.
+- Role-based application workflows.
+
+### Expected Outcome
+
+A working, well-structured prototype that a student can use to plan a semester, and that shows how a frontend-only application can handle realistic study-management workflows.
+
+---
+
+
+## 4. Technologies Used
 
 | Technology | Purpose |
 |---|---|
 | HTML5 | Application structure |
 | SVG asset files | Icons, logo, and illustrations stored in `assets/` |
 | CSS3 | Styling, layouts, themes, and responsive design |
-| Vanilla JavaScript | Application logic and interactions |
+| JavaScript | Application logic and interactions |
 | LocalStorage | Browser-based data persistence |
 | Browser Notification API | Reminder notifications |
 | Python HTTP Server | Local development server |
@@ -71,7 +109,7 @@ No frontend framework, Node.js, npm, backend framework, or database server is re
 
 ---
 
-## 4. Project Structure
+## 5. Project Structure
 
 The project contains the following files and folders:
 
@@ -123,7 +161,7 @@ smart-student-study-planner/
 
 ---
 
-## 5. Visual Assets and Icons
+## 6. Visual Assets and Icons
 
 All icons, logos, and illustrations are separate files in the `assets/` folder. None are written inside the HTML or JavaScript.
 
@@ -142,17 +180,11 @@ All icons, logos, and illustrations are separate files in the `assets/` folder. 
 
 `css/icons.css` draws each icon with a CSS mask, so icons automatically take the surrounding text colour, follow the light and dark themes, and react to hover and active states. Icon size follows `font-size`.
 
-**Adding a new icon.** Place a 24 × 24 SVG in `assets/icons/` and add one line to `css/icons.css`:
-
-```css
-.i-my-icon { -webkit-mask-image: url("../assets/icons/my-icon.svg"); mask-image: url("../assets/icons/my-icon.svg"); }
-```
-
 **Note:** Icon masks are loaded by the browser as separate files, so run the project through a local server (see the next section) instead of opening the HTML files directly.
 
 ---
 
-## 6. Installation and Setup
+## 7. Installation and Setup
 
 ### Prerequisites
 
@@ -200,7 +232,7 @@ Ctrl + C
 
 ---
 
-## 7. How to Use the Application
+## 8. How to Use the Application
 
 ### Student
 
@@ -227,7 +259,7 @@ Log in with these credentials to open the Administrator Dashboard.
 
 ---
 
-## 8. Focus Timer and Study Streak
+## 9. Focus Timer and Study Streak
 
 The focus timer provides:
 
@@ -245,7 +277,7 @@ The timer runs in the active browser page. It is not a background timer and does
 
 ---
 
-## 9. Reminder Notifications
+## 10. Reminder Notifications
 
 StudyFlow uses the browser's Notification API.
 
@@ -267,7 +299,7 @@ Important limitations:
 
 ---
 
-## 10. Data Storage
+## 11. Data Storage
 
 StudyFlow uses the browser's LocalStorage API to store application data.
 
@@ -291,7 +323,7 @@ Data remains in the browser until it is cleared or removed. It does not automati
 
 ---
 
-## 11. Security and Limitations
+## 12. Security and Limitations
 
 StudyFlow is an academic frontend prototype developed for educational purposes.
 
@@ -307,7 +339,7 @@ A production version should use a secure backend, password hashing, server-side 
 
 ---
 
-## 12. Future Improvements
+## 13. Future Improvements
 
 Possible future enhancements include:
 
@@ -323,41 +355,6 @@ Possible future enhancements include:
 
 ---
 
-## 13. Project Objectives
-
-### General Objective
-
-To design and develop a responsive, easy-to-use web application that helps university students organize their courses, manage tasks and deadlines, plan study time, and track academic progress in one place, while also giving administrators oversight of student accounts.
-
-### Specific Objectives
-
-1. **Organize academic work:** Let students create and manage courses and tasks, with priorities, deadlines, search, and filtering.
-2. **Plan study time:** Provide a study schedule by date and time that prevents overlapping sessions.
-3. **Prevent missed deadlines:** Provide reminders, including optional browser notifications when a reminder becomes due.
-4. **Build consistent habits:** Provide a focus timer (25-minute focus, 5-minute break) and a daily study streak stored separately for each student.
-5. **Show progress clearly:** Present task completion, course progress, and weekly study activity through simple summaries.
-6. **Support two roles:** Implement role-based workflows for students and administrators, including account search and activation or deactivation.
-7. **Deliver a professional interface:** Provide light and dark themes, a responsive layout, and a consistent icon and illustration set kept in a dedicated `assets/` folder.
-
-### Technical Learning Objectives
-
-As a Web Programming academic project, StudyFlow demonstrates practical use of:
-
-- HTML page structuring and semantic markup.
-- CSS styling, themes, and responsive web design.
-- JavaScript programming and DOM manipulation.
-- Event handling and form validation.
-- Browser LocalStorage for data persistence.
-- Create, read, update, and delete (CRUD) operations.
-- The browser Notification API.
-- User interface design and reusable asset management.
-- Role-based application workflows.
-
-### Expected Outcome
-
-A working, well-structured prototype that a student can use to plan a semester, and that shows how a frontend-only application can handle realistic study-management workflows.
-
----
 
 ## 14. Conclusion
 
